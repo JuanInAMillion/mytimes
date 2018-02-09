@@ -1,36 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+}
 
-#header {
-  border-bottom: 1px solid black;
+/* header */
+header {
   display: flex;
+  align-items: center;
   justify-content: space-around;
+  z-index: 1;
+  position: fixed;
+  background-color: white;
+  border-bottom: 1px solid black;
   font-family: Verdana;
   font-size: 14px;
   font-weight: bold;
-  height: 70px;
+  height: 80px;
   width: 100%;
 }
 
-.logo-img {
-flex-basis: 5%;
-width: 70px;
-height: 60px;
+.logo img {
+  width: 70px;
+  height: 60px;
+  margin-right: 12px;
 }
 
-.logo-name {
-  color: MediumAquamarine;
-  position: relative;
-  top: 10px;
-  flex-basis: 75%;
+.logo {
+  color: mediumaquamarine;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding-left: 30px;
 }
 
-.nav {
-  flex-basis: 15%;
-  position: relative;
-  top: 15px;
+header nav {
+  padding-right: 30px;
 }
 
-.nav li {
+nav span {
   display: inline-block;
+  padding: 20px 10px;
 }
 
 a {
@@ -41,99 +50,133 @@ a:visited {
   color: black;
 }
 
+/* main content */
 .main {
   display: flex;
-  justify-content: space-between;
-  border: 1px solid black;
+  width: 1250px;
+  margin: 0 auto 78px auto;
+  padding-top: 116px;
 }
 
 .column {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  margin-right: 32px;
 }
 
+.stories {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 17px;
+}
+
+.stories .text-content {
+  height: 250px;
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.image-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+
+/* first column */
 .column.large {
   width: 630px;
 }
 
-.column.medium {
-  width: 300px;
-  flex-direction: column;
-}
-
-.column.small {
-  width: 240px;
-  flex-direction: column;
-}
-
-/* ---main content--- */
-.story-img {
-  font-family: Georgia;
-  font-weight: bold;
-  font-size: 30px;
-  color: white;
-  height: 300px;
-}
-
-.story {
-  font-family: Georgia;
-  font-size: 17px;
-  color: black;
-}
-.news-bite {
-  font-size: 16px;
-  font-weight: bold;
-}
-.news-link {
-  display: flex;
-  flex-direction: column;
-  background-color: WhiteSmoke;
-  font-family: Verdana;
-  font-size: 12px;
-  color: DimGray;
-}
-
-.news-link p {
-  border-bottom: 1px solid black;
-  padding: 5px;
-}
-
-.main-img {
+.drinks {
   background-image: url("../images/img-story-main.png");
-  display: flex;
+  width: 630px;
+  text-align: left;
   font-size: 40px;
 }
 
 .girl {
   background-image: url("../images/img-story-2.png");
-  display: flex;
 }
 
 .camera {
   background-image: url("../images/img-story-3.png");
-  display: flex;
+}
+
+/* second column */
+.column.medium {
+  width: 300px;
 }
 
 .cats {
   background-image: url("../images/img-story-1.png");
-  display: flex;
-}
-/* ------ */
-
-.nav-footer {
-  display: flex;
-  justify-content: center;
 }
 
-footer {
-  background-color: MediumAquamarine;
-  height: 325px;
-  margin: auto;
-  font-family: Verdana;
-  font-size: 12px;
+/* third column */
+.column.small {
+  width: 240px;
+}
+
+img.cookie {
+  height: 240px;
+}
+
+.news-bites h3 {
+  margin-bottom: 41px;
+  font-size: 16px;
+  font-weight: bold;
   text-align: center;
 }
 
-footer h2{
+.news-bites .bite {
+  display: block;
+  padding: 11px 20px;
+  border-bottom: 1px solid black;
+  background-color: whitesmoke;
+  font-family: "Verdana", sans-serif;
+  font-size: 12px;
+  color: dimgray;
+}
+
+.bite span {
+  padding-left: 11px;
+}
+
+/* footer */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 325px;
+  background-color: mediumaquamarine;
+  margin: auto;
+  font-family: "Verdana", sans-serif;
+  font-size: 12px;
+}
+
+footer .title {
+  display: inline-block;
+  padding-right: 25px;
+  border-right: 2px solid white;
+  font-family: "Georgia", serif;
+  font-size: 16px;
+  font-weight: bold;
   color: white;
+}
+
+footer nav {
+  display: inline-block;
+  padding-left: 25px;
 }
